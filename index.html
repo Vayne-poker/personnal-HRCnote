@@ -76,11 +76,27 @@
 <div class="content">
   
   <!-- 子折疊 -->
-  <button class="collapsible-sub">7♠7♥ react</button>
-  <div class="content">
-    <div class="hand-image">圖片位置 (7♠7♥)</div>
-    <div>分析與註解文字</div>
+<button class="collapsible-sub">7♠7♥ react</button>
+<div class="content">
+  <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
+    <!-- HRC 結果圖片 -->
+    <div style="background-color:#eee; border-radius:5px; padding:10px; text-align:center;">
+      <img src="images/77_HRC_result.jpg" alt="77 HRC 結果" style="max-width:100%;">
+      <p style="color:#555; font-size:14px;">HRC 跑完結果</p>
+    </div>
+
+    <!-- iPoker 原始手牌流程圖片 -->
+    <div style="background-color:#eee; border-radius:5px; padding:10px; text-align:center;">
+      <img src="images/77_iPoker_flow.jpg" alt="77 iPoker 手牌流程" style="max-width:100%;">
+      <p style="color:#555; font-size:14px;">iPoker 原始手牌流程</p>
+    </div>
+
+    <!-- 可放分析文字 -->
+    <div style="background-color:#fafafa; padding:10px; border-radius:5px; font-size:14px; color:#333;">
+      分析與註解文字：這裡可以寫你對 7♠7♥ 的翻前、翻後策略分析、觀察到的對手行為或其他註解。
+    </div>
   </div>
+</div>
 
   <button class="collapsible-sub">8♠8♦ defend</button>
   <div class="content">
@@ -123,4 +139,5 @@ for (var i = 0; i < subColl.length; i++) {
 
 </body>
 </html>
+
 
