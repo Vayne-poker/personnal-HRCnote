@@ -1,55 +1,150 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>手牌復盤</title>
-    <style>
-        body { font-family: 'Noto Sans TC', sans-serif; line-height: 1.8; margin: 0; padding: 20px; background: #f4f4f9; color: #333; }
-        h1 { text-align: center; margin-bottom: 20px; color: #222; }
-        details { background: #fff; border-radius: 12px; margin: 10px 0; padding: 12px 18px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); transition: 0.3s ease; }
-        details[open] { box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-        summary { cursor: pointer; font-weight: 600; font-size: 1.1em; list-style: none; outline: none; }
-        summary::marker { display: none; }
-        summary::before { content: "🃏 "; }
-        details p, details ul, details ol { margin: 10px 0 0 0; }
-        a { color: #0066cc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        img { max-width: 100%; border-radius: 8px; margin: 8px 0; }
-        .footer { text-align: center; margin-top: 40px; font-size: 0.9em; color: #777; }
-        .hand { background-color: #fff; padding: 15px; margin: 15px auto; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 800px; }
-        .hand-title { font-weight: bold; margin-bottom: 10px; }
-        .hand-text { margin-bottom: 10px; }
-        .hand-image { background-color: #eee; height: 300px; display: flex; align-items: center; justify-content: center; color: #999; border-radius: 5px; margin-bottom: 10px; }
-        .code-class { font-size: 0.9em; color: #666; margin-top: 5px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>手牌復盤</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #222;
+  }
+
+  details {
+    background: #fff;
+    border-radius: 12px;
+    margin: 10px 0;
+    padding: 12px 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+  }
+
+  details[open] {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.3em;
+    list-style: none;
+    outline: none;
+  }
+
+  summary::marker { display: none; }
+  summary::before { content: "🃏 "; }
+
+  .hand {
+    background: #fafafa;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px 15px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+
+  .hand-title {
+    font-weight: 600;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hand-title .chip {
+    font-size: 0.85em;
+    color: #555;
+    text-align: right;
+  }
+
+  .hand-image {
+    background-color: #eee;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    border-radius: 8px;
+    margin: 8px 0;
+  }
+
+  .hand-text {
+    font-size: 0.95em;
+    margin-top: 5px;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+  }
+</style>
 </head>
 <body>
 
 <h1>♠♥♦♣ 8/17 43.2 週末狂歡賽 ♣♦♥♠</h1>
 
 <details>
+  <summary>手牌復盤列表</summary>
+
+  <!-- 手牌示範1 -->
+  <details>
     <summary>7♠7♥ react</summary>
     <div class="hand">
-        <div class="hand-image">
-            <img src="images/7s7h.png" alt="7♠7♥">
+      <div class="hand-title">
+        7♠7♥ react
+        <div class="chip">
+          短碼：<15bb，全場後1/3<br>
+          中碼：>15bb，全場1/3~2/3<br>
+          3rd CL | 2nd CL | CL
         </div>
-        <div class="hand-title">7♠7♥ react</div>
-        <div class="hand-text">這是一手典型的反應性加注手牌，適合在對手較為鬆散時使用。</div>
-        <div class="code-class">
-            短碼：<15bb，全場後1/3<br>
-            中碼：>15bb，全場1/3~2/3<br>
-            3rd CL<br>
-            2nd CL<br>
-            CL
-        </div>
+      </div>
+      <div class="hand-image">
+        <img src="images/7s7h.png" alt="7♠7♥">
+      </div>
+      <div class="hand-text">
+        分析與註解文字：這是一手典型反應性加注手牌，適合在對手較鬆散時使用。
+      </div>
     </div>
+  </details>
+
+  <!-- 手牌示範2 -->
+  <details>
+    <summary>8♠8♥ defend</summary>
+    <div class="hand">
+      <div class="hand-title">
+        8♠8♥ defend
+        <div class="chip">
+          短碼：<15bb，全場後1/3<br>
+          中碼：>15bb，全場1/3~2/3<br>
+          3rd CL | 2nd CL | CL
+        </div>
+      </div>
+      <div class="hand-image">
+        <img src="images/8s8h.png" alt="8♠8♥">
+      </div>
+      <div class="hand-text">
+        分析與註解文字：這手牌適合防守對手開局，控制池大小。
+      </div>
+    </div>
+  </details>
+
+  <!-- 其他手牌可依此複製新增 -->
 </details>
 
-<!-- 可以在這裡新增其他手牌的 details 區塊 -->
-
 <div class="footer">
-    ✨ 筆記持續更新中 · 最後更新日期：2025-08-21
+  ✨ 筆記持續更新中 · 最後更新日期：2025-08-21
 </div>
 
 </body>
