@@ -35,14 +35,13 @@
       width: 95%;
       border: none;
       border-radius: 8px;
-      font-size: 18px;              /* 改成 18px */
-      font-family: "Segoe UI", "Noto Sans TC", Arial, sans-serif; /* 更美觀字體 */
+      font-size: 18px;
+      font-family: "Segoe UI", "Noto Sans TC", Arial, sans-serif;
       text-align: left;
       margin: 10px auto;
       box-shadow: 0 1px 4px rgba(0,0,0,0.1);
       transition: background 0.2s;
     }
-
     .collapsible-sub:hover { background-color: #f0f0f0; }
 
     /* 內容區塊 */
@@ -71,14 +70,13 @@
 
 <h1>手牌復盤</h1>
 
-<!-- 外層折疊：43.2 週末狂歡賽 -->
-<button class="collapsible">8/17 43.2 週末狂歡賽</button>
+<!-- 大折疊範例：43.2 週末狂歡賽 -->
+<button class="collapsible-main">8/17 43.2 週末狂歡賽</button>
 <div class="content">
 
   <!-- 子折疊：7♠7♥ react -->
-  <button class="collapsible">7♠7♥ react</button>
+  <button class="collapsible-sub">7♠7♥ react</button>
   <div class="content">
-
     <!-- 1. 原始流程圖 -->
     <div style="margin-bottom:10px;">
       <img src="images/43.2/77_fold.jpg" alt="77 原始流程" style="max-width:300px; width:100%;">
@@ -88,31 +86,21 @@
     <!-- 2. HRC 結果 -->
     <div style="margin-bottom:10px;">
       <img src="images/43.2/HRC/77_fold_EV.jpg" alt="77 HRC" style="max-width:300px; width:100%;">
+      <p><b>看完 HRC 後想法：</b>這裡寫你對 HRC 結果的理解、改進策略或調整思路。</p>
     </div>
 
     <!-- 3. 頻率圖 -->
     <div style="margin-bottom:10px;">
       <img src="images/43.2/HRC/77_fold_freq.jpg" alt="77 頻率" style="max-width:300px; width:100%;">
-      <p><b>看完 HRC 後想法：</b>這裡寫你對 HRC 結果的理解、改進策略或調整思路。</p>
     </div>
 
     <!-- 4. 後記 -->
     <div style="margin-top:10px;">
       <p><b>後記：</b>這裡可以寫你整合前面思路後的總結、討論重點、未來調整方向。</p>
     </div>
-
   </div>
 
-</div>
-
-
-    <!-- 可放分析文字 -->
-    <div style="background-color:#fafafa; padding:10px; border-radius:5px; font-size:14px; color:#333;">
-      分析與註解文字：這裡可以寫你對 7♠7♥ 的翻前、翻後策略分析、觀察到的對手行為或其他註解。
-    </div>
-  </div>
-</div>
-
+  <!-- 子折疊：8♠8♦ defend -->
   <button class="collapsible-sub">8♠8♦ defend</button>
   <div class="content">
     <div class="hand-image">圖片位置 (8♠8♦)</div>
@@ -121,6 +109,7 @@
 
 </div>
 
+<!-- 大折疊範例：50 獵人賞金賽 -->
 <button class="collapsible-main">8/24 50 獵人賞金賽</button>
 <div class="content">
   <button class="collapsible-sub">9♠9♥ react</button>
@@ -131,31 +120,24 @@
 </div>
 
 <script>
-var coll = document.getElementsByClassName("collapsible-main");
-for (var i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") { content.style.display = "none"; }
-    else { content.style.display = "block"; }
-  });
-}
+  var mainColl = document.getElementsByClassName("collapsible-main");
+  for (var i = 0; i < mainColl.length; i++) {
+    mainColl[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      content.style.display = (content.style.display === "block") ? "none" : "block";
+    });
+  }
 
-var subColl = document.getElementsByClassName("collapsible-sub");
-for (var i = 0; i < subColl.length; i++) {
-  subColl[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") { content.style.display = "none"; }
-    else { content.style.display = "block"; }
-  });
-}
+  var subColl = document.getElementsByClassName("collapsible-sub");
+  for (var i = 0; i < subColl.length; i++) {
+    subColl[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      content.style.display = (content.style.display === "block") ? "none" : "block";
+    });
+  }
 </script>
 
 </body>
 </html>
-
-
-
-
-
