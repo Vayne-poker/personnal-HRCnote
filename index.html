@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vayne-手牌復盤3</title>
+  <title>Vayne-手牌復盤2</title>
   <style>
     body { font-family: Arial, sans-serif; background-color: #f5f5f5; margin: 20px; line-height: 1.6; }
     h1 { text-align: center; color: #333; margin-bottom: 30px; }
@@ -64,6 +64,31 @@
       border-radius: 5px;
       margin-bottom: 10px;
     }
+
+    /* 並排圖片區塊 */
+    .image-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .left-img {
+      flex: 1 1 45%;
+      min-width: 300px;
+    }
+    .right-imgs {
+      flex: 1 1 45%;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .left-img img, .right-imgs img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
   </style>
 </head>
 <body>
@@ -74,50 +99,62 @@
 <button class="collapsible-main">8/17 43.2 週末狂歡賽</button>
 <div class="content">
 
-<!-- 子折疊：7♠7♥ react -->
-<button class="collapsible-sub">7♠7♥ react</button>
-<div class="content">
+  <!-- 子折疊：7♠7♥ react -->
+  <button class="collapsible-sub">7♠7♥ react</button>
+  <div class="content">
 
-  <!-- 1. 原始想法文字 -->
-  <div style="margin-bottom:15px;">
-    <p><b>原始想法：</b>這裡寫你看到手牌時的第一印象、策略構想或初步決策。</p>
-  </div>
-
-  <!-- 2. 左右結構 -->
-  <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; align-items:flex-start;">
-
-    <!-- 左側：原始流程 -->
-    <div style="flex:1 1 45%; min-width:300px;">
-      <img src="images/43.2/77_fold.jpg" alt="77 原始流程" style="width:100%; margin-bottom:10px;">
+    <!-- 原始想法 -->
+    <div style="margin-bottom:15px;">
+      <p><b>原始想法：</b>這裡寫你看到手牌時的第一印象、策略構想或初步決策。</p>
     </div>
 
-    <!-- 右側：上下排列 (HRC + 頻率) -->
-    <div style="flex:1 1 55%; min-width:300px; display:flex; flex-direction:column; gap:20px;">
-      <img src="images/43.2/HRC/77_fold_EV.jpg" alt="77 EV" style="width:100%; height:auto;">
-      <img src="images/43.2/HRC/77_fold_freq.jpg" alt="77 頻率" style="width:100%; height:auto;">
+    <!-- 圖片區塊 -->
+    <div class="image-flex">
+
+      <!-- 左：原始流程 -->
+      <div class="left-img">
+        <img src="images/43.2/77_fold.jpg" alt="77 原始流程">
+      </div>
+
+      <!-- 右：上下排列 (EV + 頻率) -->
+      <div class="right-imgs">
+        <img src="images/43.2/HRC/77_fold_EV.jpg" alt="77 EV">
+        <img src="images/43.2/HRC/77_fold_freq.jpg" alt="77 頻率">
+      </div>
+
+    </div>
+
+    <!-- 後記 -->
+    <div style="margin-top:15px;">
+      <p><b>看完 HRC 後想法：</b>這裡寫你對 HRC 結果的理解、改進策略或調整思路。</p>
+      <p><b>後記：</b>這裡可以寫你整合前面思路後的總結、討論重點、未來調整方向。</p>
     </div>
 
   </div>
 
-  <!-- 3. 後記 -->
-  <div style="margin-top:15px;">
-    <p><b>看完 HRC 後想法：</b>這裡寫你對 HRC 結果的理解、改進策略或調整思路。</p>
-    <p><b>後記：</b>這裡可以寫你整合前面思路後的總結、討論重點、未來調整方向。</p>
+  <!-- 子折疊：8♠8♦ defend -->
+  <button class="collapsible-sub">8♠8♦ defend</button>
+  <div class="content">
+    <div class="hand-image">圖片位置 (8♠8♦)</div>
+    <div>分析與註解文字</div>
   </div>
 
 </div>
-
 
 
 <!-- 大折疊範例：50 獵人賞金賽 -->
 <button class="collapsible-main">8/24 50 獵人賞金賽</button>
 <div class="content">
+
+  <!-- 子折疊：9♠9♥ react -->
   <button class="collapsible-sub">9♠9♥ react</button>
   <div class="content">
     <div class="hand-image">圖片位置 (9♠9♥)</div>
     <div>分析與註解文字</div>
   </div>
+
 </div>
+
 
 <script>
   var mainColl = document.getElementsByClassName("collapsible-main");
@@ -141,18 +178,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
