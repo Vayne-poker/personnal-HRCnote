@@ -78,25 +78,31 @@
 <button class="collapsible-sub">7♠7♥ react</button>
 <div class="content">
 
-  <!-- 併排圖片區塊 -->
-  <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-bottom:10px;">
-    <!-- 原始流程 -->
-    <div style="flex:1 1 400px; max-width:400px;">
-      <img src="images/43.2/77_fold.jpg" alt="77 原始流程" style="width:100%;">
-      <p><b>原始想法：</b>這裡寫你看到手牌時的第一印象、策略構想或初步決策。</p>
+  <!-- 左右結構 -->
+  <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+
+    <!-- 左側：原始流程 -->
+    <div style="flex:1 1 420px; max-width:420px;">
+      <img src="images/43.2/77_fold.jpg" alt="77 原始流程" style="width:100%; margin-bottom:10px;">
     </div>
 
-    <!-- HRC 結果 -->
-    <div style="flex:1 1 400px; max-width:400px;">
+    <!-- 右側：上下排列 (HRC + 頻率) -->
+    <div style="flex:1 1 420px; max-width:420px; display:flex; flex-direction:column; gap:15px;">
       <img src="images/43.2/HRC/77_fold_EV.jpg" alt="77 EV" style="width:100%;">
-      <p><b>看完 HRC 後想法：</b>這裡寫你對 HRC 結果的理解、改進策略或調整思路。</p>
-    </div>
-
-    <!-- 頻率圖 -->
-    <div style="flex:1 1 400px; max-width:400px;">
       <img src="images/43.2/HRC/77_fold_freq.jpg" alt="77 頻率" style="width:100%;">
     </div>
+
   </div>
+
+  <!-- 分析文字區塊 -->
+  <div style="margin-top:15px;">
+    <p><b>原始想法：</b>這裡寫你看到手牌時的第一印象、策略構想或初步決策。</p>
+    <p><b>看完 HRC 後想法：</b>這裡寫你對 HRC 結果的理解、改進策略或調整思路。</p>
+    <p><b>後記：</b>這裡可以寫你整合前面思路後的總結、討論重點、未來調整方向。</p>
+  </div>
+
+</div>
+
 
   <!-- 後記 -->
   <div style="margin-top:10px;">
@@ -147,6 +153,7 @@
 
 </body>
 </html>
+
 
 
 
