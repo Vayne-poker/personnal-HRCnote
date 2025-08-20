@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vayne-手牌復盤11</title>
+  <title>Vayne-手牌復盤12</title>
   <style>
     body { font-family: Arial, sans-serif; background-color: #f5f5f5; margin: 20px; line-height: 1.6; }
     h1 { text-align: center; color: #333; margin-bottom: 30px; }
@@ -54,6 +54,45 @@
       box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
     }
 
+    /* 左右圖片並排 */
+    .image-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .left-img {
+      flex: 0 0 40%;
+      min-width: 300px;
+    }
+    .right-imgs {
+      flex: 0 0 55%;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .left-img img,
+    .right-imgs img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* 手機自動換行 */
+    @media (max-width: 768px) {
+      .image-flex {
+        flex-direction: column;
+      }
+      .left-img, .right-imgs {
+        flex: 1 1 100%;
+        min-width: 0;
+      }
+    }
+
     .hand-image {
       background-color: #eee;
       height: 200px;
@@ -64,53 +103,7 @@
       border-radius: 5px;
       margin-bottom: 10px;
     }
-
-<style>
-  /* 並排圖片區塊 */
-.image-flex {
-  display: flex;
-  flex-wrap: wrap; /* 手機自動換行 */
-  gap: 20px;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 1100px; /* 控制整體寬度 */
-  margin: auto;
-}
-
-.left-img {
-  flex: 1 1 38%; /* 左邊稍小 */
-  min-width: 280px;
-}
-
-.right-imgs {
-  flex: 1 1 55%; /* 右邊略大 */
-  min-width: 280px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.left-img img,
-.right-imgs img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* 手機螢幕自動換行 */
-@media (max-width: 768px) {
-  .image-flex {
-    flex-direction: column;
-  }
-  .left-img, .right-imgs {
-    flex: 1 1 100%;
-    min-width: 0;
-  }
-}
-
-
-</style>
-
+  </style>
 </head>
 <body>
 
@@ -120,40 +113,34 @@
 <button class="collapsible-main">8/17 43.2 週末狂歡賽</button>
 <div class="content">
 
-<!-- 子折疊：7♠7♥ react -->
-<button class="collapsible-sub">7♠7♥ react</button>
-<div class="content">
+  <!-- 子折疊：7♠7♥ react -->
+  <button class="collapsible-sub">7♠7♥ react</button>
+  <div class="content">
 
-  <!-- 1. 原始想法文字 -->
-  <div style="margin-bottom:15px;">
-    <p><b>原始想法：</b>這裡寫你看到手牌時的第一印象、策略構想或初步決策。</p>
+    <!-- 原始想法 -->
+    <div style="margin-bottom:15px;">
+      <p><b>原始想法：</b>這裡寫你看到手牌時的第一印象、策略構想或初步決策。</p>
+    </div>
+
+    <!-- 左右圖片 -->
+    <div class="image-flex">
+      <div class="left-img" style="flex: 0 0 35%;">
+        <img src="images/43.2/77_fold.jpg" alt="77 原始流程">
+      </div>
+      <div class="right-imgs" style="flex: 0 0 60%;">
+        <img src="images/43.2/HRC/77_fold_EV.jpg" alt="77 EV">
+        <img src="images/43.2/HRC/77_fold_freq.jpg" alt="77 頻率">
+      </div>
+    </div>
+
+
+    <!-- 後記與分析 -->
+    <div style="margin-top:15px;">
+      <p><b>看完 HRC 後想法：</b>這裡寫你對 HRC 結果的理解、改進策略或調整思路。</p>
+      <p><b>後記：</b>這裡可以寫你整合前面思路後的總結、討論重點、未來調整方向。</p>
+    </div>
+
   </div>
-
-<!-- 左右結構 -->
-<div class="image-flex">
-
-  <!-- 左側：原始流程 -->
-  <div class="left-img">
-    <img src="images/43.2/77_fold.jpg" alt="77 原始流程">
-  </div>
-
-  <!-- 右側：上下排列 (HRC + 頻率) -->
-  <div class="right-imgs">
-    <img src="images/43.2/HRC/77_fold_EV.jpg" alt="77 EV">
-    <img src="images/43.2/HRC/77_fold_freq.jpg" alt="77 頻率">
-  </div>
-
-</div>
-
-
-  <!-- 3. 後記與分析 -->
-  <div style="margin-top:15px;">
-    <p><b>看完 HRC 後想法：</b>這裡寫你對 HRC 結果的理解、改進策略或調整思路。</p>
-    <p><b>後記：</b>這裡可以寫你整合前面思路後的總結、討論重點、未來調整方向。</p>
-  </div>
-
-</div>
-
 
   <!-- 子折疊：8♠8♦ defend -->
   <button class="collapsible-sub">8♠8♦ defend</button>
@@ -164,20 +151,15 @@
 
 </div>
 
-
 <!-- 大折疊範例：50 獵人賞金賽 -->
 <button class="collapsible-main">8/24 50 獵人賞金賽</button>
 <div class="content">
-
-  <!-- 子折疊：9♠9♥ react -->
   <button class="collapsible-sub">9♠9♥ react</button>
   <div class="content">
     <div class="hand-image">圖片位置 (9♠9♥)</div>
     <div>分析與註解文字</div>
   </div>
-
 </div>
-
 
 <script>
   var mainColl = document.getElementsByClassName("collapsible-main");
@@ -201,15 +183,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
