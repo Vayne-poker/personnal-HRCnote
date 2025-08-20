@@ -34,9 +34,14 @@
     font-size: 1.1em;
     cursor: pointer;
     list-style: none;
+    display: flex;
+    align-items: center;
   }
   summary::marker { display: none; }
-  summary::before { content: "🃏 "; }
+  summary .card-symbol {
+    font-size: 28px;
+    margin-right: 6px;
+  }
   .hand p { margin: 8px 0; }
   .hand-image {
     background: #eaeaea;
@@ -50,17 +55,22 @@
     font-style: italic;
   }
   .hand-section { font-weight: 600; }
+  .chip-info { margin-left: auto; font-weight: normal; font-size: 0.9em; color: #555; }
 </style>
 </head>
 <body>
 
-<h1>♠♥♦♣ 手牌復盤 ♣♦♥♠</h1>
+<h1>8/17 43.2週末狂歡賽</h1>
+
+<!-- 17 手牌示範 -->
 
 <details>
-  <summary>77-react</summary>
+  <summary>
+    <span class="card-symbol">7♠</span><span class="card-symbol">7♥</span> 77-react
+    <span class="chip-info">中碼</span>
+  </summary>
   <div class="hand">
-    <p><span class="hand-section">日期 / 場次：</span>2025-08-21 #001</p>
-    <p><span class="hand-section">籌碼分布：</span>長碼 / 中碼 / 短碼</p>
+    <p><span class="hand-section">日期 / 場次：</span>2025-08-17 #001</p>
     <div class="hand-image">圖片位置 (77-react)</div>
     <p><span class="hand-section">Spot 分析：</span>這裡填當下想法、對手動作解讀、決策理由。</p>
     <p><span class="hand-section">復盤結論：</span>策略優化或心態提醒</p>
@@ -68,17 +78,115 @@
 </details>
 
 <details>
-  <summary>88-defend</summary>
+  <summary>
+    <span class="card-symbol">8♠</span><span class="card-symbol">8♥</span> 88-defend
+    <span class="chip-info">長碼</span>
+  </summary>
   <div class="hand">
-    <p><span class="hand-section">日期 / 場次：</span>2025-08-21 #002</p>
-    <p><span class="hand-section">籌碼分布：</span>長碼 / 中碼 / 短碼</p>
+    <p><span class="hand-section">日期 / 場次：</span>2025-08-17 #002</p>
     <div class="hand-image">圖片位置 (88-defend)</div>
     <p><span class="hand-section">Spot 分析：</span>這裡填當下想法、對手動作解讀、決策理由。</p>
     <p><span class="hand-section">復盤結論：</span>策略優化或心態提醒</p>
   </div>
 </details>
 
-<!-- 可以複製上面這個 <details> 區塊，快速加入其他手牌 -->
+<details>
+  <summary>
+    <span class="card-symbol">9♠</span><span class="card-symbol">9♥</span> 99-react
+    <span class="chip-info">中碼</span>
+  </summary>
+  <div class="hand">
+    <p><span class="hand-section">日期 / 場次：</span>2025-08-17 #003</p>
+    <div class="hand-image">圖片位置 (99-react)</div>
+    <p><span class="hand-section">Spot 分析：</span>這裡填當下想法、對手動作解讀、決策理由。</p>
+    <p><span class="hand-section">復盤結論：</span>策略優化或心態提醒</p>
+  </div>
+</details>
 
-</body>
-</html>
+<details>
+  <summary>
+    <span class="card-symbol">A♠</span><span class="card-symbol">9♥</span> A9o
+    <span class="chip-info">中碼</span>
+  </summary>
+  <div class="hand">
+    <p><span class="hand-section">日期 / 場次：</span>2025-08-17 #004</p>
+    <div class="hand-image">圖片位置 (A9o)</div>
+    <p><span class="hand-section">Spot 分析：</span>這裡填當下想法、對手動作解讀、決策理由。</p>
+    <p><span class="hand-section">復盤結論：</span>策略優化或心態提醒</p>
+  </div>
+</details>
+
+<details>
+  <summary>
+    <span class="card-symbol">A♠</span><span class="card-symbol">K♠</span> AKs2-3B
+    <span class="chip-info">短碼</span>
+  </summary>
+  <div class="hand">
+    <p><span class="hand-section">日期 / 場次：</span>2025-08-17 #005</p>
+    <div class="hand-image">圖片位置 (AKs2-3B)</div>
+    <p><span class="hand-section">Spot 分析：</span>這裡填當下想法、對手動作解讀、決策理由。</p>
+    <p><span class="hand-section">復盤結論：</span>策略優化或心態提醒</p>
+  </div>
+</details>
+
+<details>
+  <summary>
+    <span class="card-symbol">A♠</span><span class="card-symbol">K♥</span> AKs-call all in
+    <span class="chip-info">長碼</span>
+  </summary>
+  <div class="hand">
+    <p><span class="hand-section">日期 / 場次：</span>2025-08-17 #006</p>
+    <div class="hand-image">圖片位置 (AKs-call all in)</div>
+    <p><span class="hand-section">Spot 分析：</span>這裡填當下想法、對手動作解讀、決策理由。</p>
+    <p><span class="hand-section">復盤結論：</span>策略優化或心態提醒</p>
+  </div>
+</details>
+
+<details>
+  <summary>
+    <span class="card-symbol">A♠</span><span class="card-symbol">Q♥</span> AQo-flat
+    <span class="chip-info">中碼</span>
+  </summary>
+  <div class="hand">
+    <p><span class="hand-section">日期 / 場次：</span>2025-08-17 #007</p>
+    <div class="hand-image">圖片位置 (AQo-flat)</div>
+    <p><span class="hand-section">Spot 分析：</span>這裡填當下想法、對手動作解讀、決策理由。</p>
+    <p><span class="hand-section">復盤結論：</span>策略優化或心態提醒</p>
+  </div>
+</details>
+
+<details>
+  <summary>
+    <span class="card-symbol">A♠</span><span class="card-symbol">T♥</span> ATo-flat
+    <span class="chip-info">中碼</span>
+  </summary>
+  <div class="hand">
+    <p><span class="hand-section">日期 / 場次：</span>2025-08-17 #008</p>
+    <div class="hand-image">圖片位置 (ATo-flat)</div>
+    <p><span class="hand-section">Spot 分析：</span>這裡填當下想法、對手動作解讀、決策理由。</p>
+    <p><span class="hand-section">復盤結論：</span>策略優化或心態提醒</p>
+  </div>
+</details>
+
+<details>
+  <summary>
+    <span class="card-symbol">A♠</span><span class="card-symbol">T♣</span> ATo-open
+    <span class="chip-info">短碼</span>
+  </summary>
+  <div class="hand">
+    <p><span class="hand-section">日期 / 場次：</span>2025-08-17 #009</p>
+    <div class="hand-image">圖片位置 (ATo-open)</div>
+    <p><span class="hand-section">Spot 分析：</span>這裡填當下想法、對手動作解讀、決策理由。</p>
+    <p><span class="hand-section">復盤結論：</span>策略優化或心態提醒</p>
+  </div>
+</details>
+
+<details>
+  <summary>
+    <span class="card-symbol">J♠</span><span class="card-symbol">T♥</span> JT-BB
+    <span class="chip-info">中碼</span>
+  </summary>
+  <div class="hand">
+    <p><span class="hand-section">日期 / 場次：</span>2025-08-17 #010</p>
+    <div class="hand-image">圖片位置 (JT-BB)</div>
+    <p><span class="hand-section">Spot 分析：</span>這裡填當下想法、對手動作解讀、決策理由。</p>
