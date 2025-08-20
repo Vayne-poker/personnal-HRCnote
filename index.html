@@ -71,21 +71,38 @@
 
 <h1>手牌復盤</h1>
 
-<!-- 大折疊示範 -->
-<button class="collapsible-main">8/17 43.2 週末狂歡賽</button>
+<!-- 外層折疊：43.2 週末狂歡賽 -->
+<button class="collapsible">8/17 43.2 週末狂歡賽</button>
 <div class="content">
-  
-  <!-- 子折疊 -->
-<button class="collapsible">7♠7♥ react</button>
-<div class="content">
-  <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
-    <img src="images/43.2/77  fold.jpg" alt="77 原始流程" style="max-width:300px; width:100%;">
-    <img src="images/43.2/HRC/77fold EV.jpg" alt="77 EV" style="max-width:300px; width:100%;">
-    <img src="images/43.2/HRC/77 fold freq.jpg" alt="77 頻率" style="max-width:300px; width:100%;">
+
+  <!-- 子折疊：7♠7♥ react -->
+  <button class="collapsible">7♠7♥ react</button>
+  <div class="content">
+
+    <!-- 1. 原始流程圖 -->
+    <div style="margin-bottom:10px;">
+      <img src="images/43.2/77_fold.jpg" alt="77 原始流程" style="max-width:300px; width:100%;">
+      <p><b>原始想法：</b>這裡寫你看到手牌時的第一印象、策略構想或初步決策。</p>
+    </div>
+
+    <!-- 2. HRC 結果 -->
+    <div style="margin-bottom:10px;">
+      <img src="images/43.2/HRC/77_fold_EV.jpg" alt="77 HRC" style="max-width:300px; width:100%;">
+    </div>
+
+    <!-- 3. 頻率圖 -->
+    <div style="margin-bottom:10px;">
+      <img src="images/43.2/HRC/77_fold_freq.jpg" alt="77 頻率" style="max-width:300px; width:100%;">
+      <p><b>看完 HRC 後想法：</b>這裡寫你對 HRC 結果的理解、改進策略或調整思路。</p>
+    </div>
+
+    <!-- 4. 後記 -->
+    <div style="margin-top:10px;">
+      <p><b>後記：</b>這裡可以寫你整合前面思路後的總結、討論重點、未來調整方向。</p>
+    </div>
+
   </div>
-  <div style="margin-top:10px;">
-    <p>這裡可以寫分析文字、思路、註解等等。</p>
-  </div>
+
 </div>
 
 
@@ -137,6 +154,7 @@ for (var i = 0; i < subColl.length; i++) {
 
 </body>
 </html>
+
 
 
 
