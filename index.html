@@ -1,137 +1,56 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>手牌復盤</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  body {
-    font-family: 'Noto Sans TC', sans-serif;
-    background: linear-gradient(160deg, #f4f4f9, #e8e8f0);
-    color: #333;
-    margin: 0;
-    padding: 20px;
-  }
-  h1 { text-align: center; color: #222; margin-bottom: 30px; }
-  
-  /* 外層折疊 */
-  details {
-    background: #fff;
-    border-radius: 14px;
-    padding: 18px 22px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
-  }
-  details[open] { box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
-  summary {
-    font-weight: 600;
-    font-size: 1.3em;
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  summary::marker { display: none; }
-
-  /* 手牌標題符號 */
-  summary .card-symbols {
-    font-size: 28px;
-    font-weight: bold;
-    margin-right: 8px;
-  }
-  summary .chip-info {
-    font-size: 0.9em;
-    color: #777;
-    margin-left: 12px;
-    font-weight: normal;
-  }
-
-  /* 手牌內容區塊 */
-  .hand {
-    background: #fdfdff;
-    padding: 15px 18px;
-    margin: 12px 0;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    transition: 0.2s ease;
-  }
-  .hand:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.12); }
-  .hand p { margin: 8px 0; }
-  .hand-section { font-weight: 600; color: #555; }
-
-  /* 圖片區塊 */
-  .hand-image {
-    background: #e8e8f0;
-    height: 250px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
-    font-style: italic;
-    margin: 10px 0;
-  }
-
-  /* 碼量分類說明 */
-  .chip-legend {
-    background: #fff;
-    padding: 12px 18px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  }
-  .chip-legend p { margin: 6px 0; color: #555; font-size: 0.95em; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手牌復盤</title>
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; line-height: 1.8; margin: 0; padding: 20px; background: #f4f4f9; color: #333; }
+        h1 { text-align: center; margin-bottom: 20px; color: #222; }
+        details { background: #fff; border-radius: 12px; margin: 10px 0; padding: 12px 18px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); transition: 0.3s ease; }
+        details[open] { box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        summary { cursor: pointer; font-weight: 600; font-size: 1.1em; list-style: none; outline: none; }
+        summary::marker { display: none; }
+        summary::before { content: "🃏 "; }
+        details p, details ul, details ol { margin: 10px 0 0 0; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        img { max-width: 100%; border-radius: 8px; margin: 8px 0; }
+        .footer { text-align: center; margin-top: 40px; font-size: 0.9em; color: #777; }
+        .hand { background-color: #fff; padding: 15px; margin: 15px auto; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 800px; }
+        .hand-title { font-weight: bold; margin-bottom: 10px; }
+        .hand-text { margin-bottom: 10px; }
+        .hand-image { background-color: #eee; height: 300px; display: flex; align-items: center; justify-content: center; color: #999; border-radius: 5px; margin-bottom: 10px; }
+        .code-class { font-size: 0.9em; color: #666; margin-top: 5px; }
+    </style>
 </head>
 <body>
 
-<h1>手牌復盤</h1>
+<h1>♠♥♦♣ 8/17 43.2 週末狂歡賽 ♣♦♥♠</h1>
 
-<div class="chip-legend">
-  <p><strong>碼量分類：</strong></p>
-  <p>短碼：&lt;15bb，全場後 1/3</p>
-  <p>中碼：&gt;15bb，全場 1/3 ~ 2/3</p>
-  <p>3rd CL</p>
-  <p>2nd CL</p>
-  <p>CL</p>
-</div>
-
-<!-- 最外層折疊：一場比賽 -->
 <details>
-  <summary>8/17 43.2週末狂歡賽</summary>
-
-  <!-- 手牌折疊 -->
-  <details>
-    <summary>
-      <span class="card-symbols">7♠7♥</span> react
-      <span class="chip-info">中碼</span>
-    </summary>
+    <summary>7♠7♥ react</summary>
     <div class="hand">
-      <p><span class="hand-section">日期 / 場次：</span>2025-08-17 #001</p>
-      <div class="hand-image">圖片位置 (77-react)</div>
-      <p><span class="hand-section">Spot 分析：</span>這裡填當下想法、對手動作解讀、決策理由。</p>
-      <p><span class="hand-section">復盤結論：</span>策略優化或心態提醒</p>
+        <div class="hand-image">
+            <img src="images/7s7h.png" alt="7♠7♥">
+        </div>
+        <div class="hand-title">7♠7♥ react</div>
+        <div class="hand-text">這是一手典型的反應性加注手牌，適合在對手較為鬆散時使用。</div>
+        <div class="code-class">
+            短碼：<15bb，全場後1/3<br>
+            中碼：>15bb，全場1/3~2/3<br>
+            3rd CL<br>
+            2nd CL<br>
+            CL
+        </div>
     </div>
-  </details>
-
-  <details>
-    <summary>
-      <span class="card-symbols">8♠8♥</span> defend
-      <span class="chip-info">長碼</span>
-    </summary>
-    <div class="hand">
-      <p><span class="hand-section">日期 / 場次：</span>2025-08-17 #002</p>
-      <div class="hand-image">圖片位置 (88-defend)</div>
-      <p><span class="hand-section">Spot 分析：</span>這裡填當下想法、對手動作解讀、決策理由。</p>
-      <p><span class="hand-section">復盤結論：</span>策略優化或心態提醒</p>
-    </div>
-  </details>
-
-  <!-- 其他手牌依此類推 -->
 </details>
+
+<!-- 可以在這裡新增其他手牌的 details 區塊 -->
+
+<div class="footer">
+    ✨ 筆記持續更新中 · 最後更新日期：2025-08-21
+</div>
 
 </body>
 </html>
